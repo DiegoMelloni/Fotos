@@ -16,7 +16,7 @@
     <!-- Marcador para ancorar as imagens -->
     <a-marker preset="hiro">
       <!-- Adicionando uma imagem 2D ao marcador -->
-      <a-image src="https://www.example.com/sua-imagem.jpg" 
+      <a-image src="https://i.imgur.com/NAABuPd.png" 
                position="0 0 0" 
                scale="3 3 3" 
                rotation="0 0 0">
