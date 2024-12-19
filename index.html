@@ -2,24 +2,37 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <title>AR com Imagens</title>
   <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/jeromeetienne/AR.js/aframe/build/aframe-ar.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/jeromeetienne/AR.js/aframe/build/aframe-ar.min.js"></script>
   <style>
-    body { margin: 0; overflow: hidden; }
-    canvas { display: block; }
+    /* Remover margens e garantir tela cheia */
+    body { 
+      margin: 0; 
+      overflow: hidden; 
+      display: flex; 
+      justify-content: center; 
+      align-items: center; 
+      height: 100vh; 
+      background-color: #000;
+    }
+    canvas { 
+      display: block; 
+    }
   </style>
 </head>
 <body>
+  <!-- A-Frame Scene -->
   <a-scene embedded arjs>
-    <!-- Marcador para ancorar as imagens -->
+    <!-- Marcador Hiro para ancorar a imagem -->
     <a-marker preset="hiro">
-      <!-- Adicionando uma imagem 2D ao marcador -->
-      <a-image src="https://i.imgur.com/NAABuPd.png" 
-               position="0 0 0" 
-               scale="3 3 3" 
-               rotation="0 0 0">
+      <!-- Configuração da imagem -->
+      <a-image 
+        src="https://i.imgur.com/NAABuPd.png" 
+        position="0 0 0" 
+        scale="3 3 3" 
+        rotation="0 0 0">
       </a-image>
     </a-marker>
 
